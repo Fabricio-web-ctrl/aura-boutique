@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boutique · Entrar</title>
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body class="auth-body">
+
+  <div class="auth-container">
+
+    <!-- Lado esquerdo: Branding -->
+    <aside class="auth-brand">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">◆</span>
+        <span>Boutique<strong>.</strong></span>
+      </a>
+
+      <div class="auth-brand-content">
+        <span class="badge">Moda Autoral & Exclusiva</span>
+        <h1>Sua curadoria<br /><span>começa aqui.</span></h1>
+        <p>
+          Acesse sua conta para consultar o acervo, vitrines personalizadas
+          e o histórico de compras conforme o seu estilo.
+        </p>
+
+        <ul class="auth-features">
+          <li><span class="check">✓</span> Vitrines personalizadas pelo seu estilo</li>
+          <li><span class="check">✓</span> Histórico de compras e pedidos</li>
+          <li><span class="check">✓</span> Curadoria exclusiva de coleções</li>
+        </ul>
+      </div>
+
+      <p class="auth-brand-footer">© 2025 Boutique · Gestão de Moda Autoral</p>
+    </aside>
+
+    <!-- Lado direito: Formulário -->
+    <main class="auth-main">
+
+      <div class="auth-card">
+
+        <!-- Abas -->
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="login" role="tab">Entrar</button>
+          <button class="tab" data-tab="cadastro" role="tab">Criar conta</button>
+          <span class="tab-indicator"></span>
+        </div>
+
+        <!-- ===== FORM LOGIN ===== -->
+        <form id="formLogin" class="auth-form active" novalidate>
+
+          <div class="form-group">
+            <label for="login-email">E-mail <span class="req">*</span></label>
+            <input type="email" id="login-email" name="email" placeholder="cliente@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="login-senha">Senha <span class="req">*</span></label>
+            <div class="input-wrap">
+              <input type="password" id="login-senha" name="senha" placeholder="••••••••" required />
+              <button type="button" class="toggle-eye" data-target="login-senha" aria-label="Mostrar senha">👁</button>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="checkbox">
+              <input type="checkbox" id="lembrar" />
+              <span>Lembrar de mim</span>
+            </label>
+            <a href="#" class="link">Esqueci a senha</a>
+          </div>
+
+          <div id="feedbackLogin" class="feedback"></div>
+
+          <button type="submit" class="btn">Entrar</button>
+
+          <p class="form-alt">
+            Não tem conta? <a href="#" data-switch="cadastro" class="link">Cadastre-se</a>
+          </p>
+        </form>
+
+        <!-- ===== FORM CADASTRO ===== -->
+        <form id="formCadastro" class="auth-form" novalidate>
+
+          <div class="form-group">
+            <label for="cad-nome">Nome completo <span class="req">*</span></label>
+            <input type="text" id="cad-nome" name="nome" placeholder="Ex: Ana Beatriz Souza" required />
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="cad-cpf">CPF <span class="req">*</span></label>
+              <input type="text" id="cad-cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" required />
+            </div>
+            <div class="form-group">
+              <label for="cad-telefone">Telefone</label>
+              <input type="tel" id="cad-telefone" name="telefone" placeholder="(11) 90000-0000" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cad-email">E-mail <span class="req">*</span></label>
+            <input type="email" id="cad-email" name="email" placeholder="cliente@email.com" required />
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="cad-senha">Senha <span class="req">*</span></label>
+              <div class="input-wrap">
+                <input type="password" id="cad-senha" name="senha" placeholder="Mín. 6 caracteres" required />
+                <button type="button" class="toggle-eye" data-target="cad-senha" aria-label="Mostrar senha">👁</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cad-confirma">Confirmar senha <span class="req">*</span></label>
+              <input type="password" id="cad-confirma" name="confirma" placeholder="Repita a senha" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Estilo preferido <span class="req">*</span></label>
+            <div class="estilos">
+              <div class="chip">
+                <input type="radio" id="est-street" name="estilo" value="Streetwear" required />
+                <label for="est-street">Streetwear</label>
+              </div>
+              <div class="chip">
+                <input type="radio" id="est-minimal" name="estilo" value="Minimalista" />
+                <label for="est-minimal">Minimalista</label>
+              </div>
+              <div class="chip">
+                <input type="radio" id="est-alt" name="estilo" value="Alt" />
+                <label for="est-alt">Alt</label>
+              </div>
+              <div class="chip">
+                <input type="radio" id="est-classico" name="estilo" value="Clássico" />
+                <label for="est-classico">Clássico</label>
+              </div>
+              <div class="chip">
+                <input type="radio" id="est-romantico" name="estilo" value="Romântico" />
+                <label for="est-romantico">Romântico</label>
+              </div>
+            </div>
+          </div>
+
+          <div id="feedbackCadastro" class="feedback"></div>
+
+          <button type="submit" class="btn">Criar conta</button>
+
+          <p class="form-alt">
+            Já tem conta? <a href="#" data-switch="login" class="link">Entrar</a>
+          </p>
+        </form>
+
+      </div>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
